@@ -1,0 +1,115 @@
+.padnone {padding: 0;}
+.marginnone {margin: 0;}
+.clearnone {clear: none;}
+
+.task-col div.title {
+    text-align: center;
+    font-size: 1em;
+
+}
+
+
+
+.task-box.colourbar{
+    padding: 0.25em;;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-bottom-left-radius: 0em;
+    border-bottom-right-radius: 0em;
+    margin: -0.6em;
+    margin-bottom: 0.75em;
+}
+.task-box.statuscolour0 {
+    border-color: rgb(197, 197, 197);
+    background-color: rgb(255, 255, 255);
+}
+div.task-box.statuscolour0.colourbar {background-color: rgb(197, 197, 197);}
+.task-box.statuscolour1 {
+    border-color: #289bff;
+    background-color: aliceblue;
+}
+div.task-box.statuscolour1.colourbar {background-color: #289bff;}
+.task-box.statuscolour2 {
+    border-color: rgb(236, 54, 54);
+    background-color: hsl(0, 72%, 92%);
+}
+div.task-box.statuscolour2.colourbar {background-color: rgb(236, 54, 54);}
+.task-box.statuscolour3 {
+    border-color: rgb(252, 101, 41);
+    background-color:rgb(249, 230, 223);
+}
+div.task-box.statuscolour3.colourbar {background-color:rgb(252, 101, 41);}
+.task-box.statuscolour4 {
+    border-color: rgb(34, 214, 82);
+    background-color: rgb(226, 252, 233);
+}
+div.task-box.statuscolour4.colourbar {background-color: rgb(34, 214, 82);}
+
+
+
+
+.task-box {
+    border-radius: 0.5em;
+    padding: 0.5em;
+    border: 2px solid;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.task-box p.title {
+    color: black;
+    text-align: left;
+    font-weight: 400;
+}
+.task-box p.subtitle {
+    margin-top: -0.5em;
+    font-style: italic;
+    font-size: 0.7em;
+}
+
+
+
+.task-box div.interactbar {
+    display: block;
+    padding-bottom: 1.5em;
+}
+.task-box div.interactbar button {
+    color: rgb(65, 65, 65);
+    padding: 0.15em;
+    margin-left: 0.2em;
+    font-size: 1.2em;
+    background: none;
+    border: none;
+    float: right;
+}
+.task-box div.interactbar div.datasection {
+    float: left;
+    margin-top: -0.1em;
+    overflow-x: hidden;
+    display: inline;
+}
+.task-box div.interactbar div.datasection .databox{
+    border: solid 1px grey;
+    display: inline-block;
+    margin: 0;
+    
+    
+}
+.task-box div.interactbar div.datasection .databox p{
+    color: grey;
+    text-align: center;
+    display: inline;
+    width: min-content;
+    padding-top: -0.1em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    font-size: 0.8em;
+    text-transform: capitalize;
+}
+
+
+
+
+
+

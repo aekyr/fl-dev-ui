@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="./static/bootstrap/css/custom/flpm_box.css">
+{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-xs-12 title">
+        FL Project Manager
+    </div>
+</div>
+<div class="row">
+    {% for taskgroupnum in taskgroups %}
+        <div class="col-md-{{num_cols}} padnone clearnone taskcol">
+            <div class="title">
+                <a href="/theseusgroups?tgs={{taskgroups[taskgroupnum]}}">{{taskgroups[taskgroupnum]}}</a>
+            </div>
+        {% for task in tasks %}
+            {% if task['data']['group'] == taskgroupnum %}
+                {% include 'taskbox.html' %}
+            {% endif %}
+            
+        {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock main %}
+
+
+{% block js %}
+<script src="./../static/js/custom/flpm_box.js"></script>
+{% endblock %}
+
+
+

@@ -1,0 +1,25 @@
+body {
+  font-size: 10px;
+  color: #fff;
+  font-family: 'Oxygen', sans-serif;
+  color:black;
+}
+
+.white a {
+  color: #fff;
+}
+
+div.title {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.row {
+  margin-left: 10%;
+  margin-right: 10%;
+  
+}
+/* END HEADER */

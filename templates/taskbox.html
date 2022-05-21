@@ -1,0 +1,42 @@
+<div class="row marginnone">
+    <div class="task-box statuscolour{{0 if task['data']['status'] == 'complete' else task['data']['section']}}">
+    <div class="task-box colourbar statuscolour{{0 if task['data']['status'] == 'complete' else task['data']['section']}}"></div>
+    <p class="title">{{task['info']['title']}}</p>
+    <p class="subtitle">{{task['info']['subtitle']}}</p>
+    <p class="description">{{task['info']['description']}}</p>
+    
+    <div class="bottombar">
+        <div class="interactbar">
+            
+
+            <form action="/theseus" method="post"><button class="glyphicon glyphicon-eye-close" type="submit" value="remove_{{task['id']}}" name="interaction"></button></form>
+            {% if task['data']['status'] == 'complete' %}
+                <form action="/theseus" method="post"><button class="glyphicon glyphicon-off" type="submit" value="revive_{{task['id']}}" name="interaction"></button></form>
+            {% else  %}
+                <form action="/theseus" method="post"><button class="glyphicon glyphicon-pencil" type="submit" value="edit_{{task['id']}}" name="interaction"></button></form>
+                <form action="/theseus" method="post"><button class="glyphicon glyphicon-duplicate" type="submit" value="duplicate_{{task['id']}}" name="interaction"></button></form>
+                <form action="/theseus" method="post"><button class="glyphicon glyphicon-check" type="submit" value="complete_{{task['id']}}" name="interaction"></button></form>
+            {% endif %}
+            
+            
+            <div class="datasection">
+                {% if task['data']['status'] != 'complete' %}
+                <div class="databox">
+                    <p>{{task['time']['timeleft']}} {{task['time']['unit']}}</p>
+                </div>  
+                {% endif %}
+
+                {% if task['info']['assignees_str'] %}
+                <div class="databox">
+                    <p>{{task['info']['assignees_str']}}</p>
+                </div>  
+                {% endif %}
+                
+            </div>
+            
+
+        </div>
+        
+    </div>
+</div>
+</div>
