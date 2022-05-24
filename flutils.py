@@ -45,7 +45,7 @@ def group_tasks_by_date(tasks):
     }
     for task in tasks:
         duration = (task['time'].get('datetime_end', None) - datetime.now()).total_seconds() if task['time'].get('datetime_end', None) != None else None
-        task['data']['date_state'] = 4 if task['data'].get('status', None) == 'complete' else 1 if duration == None else 2 if duration > 0 else 3 
+        task['data']['cat_num'] = 4 if task['data'].get('status', None) == 'complete' else 1 if duration == None else 2 if duration > 0 else 3 
     
     return tasks, tgcategorys
 
