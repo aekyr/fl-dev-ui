@@ -20,7 +20,7 @@ def mainpage(projectname):
 def tgview(projectname, mode):
     # taskgroups_desired = request.args.get('tgs').split(';')
     taskgroups_desired = request.args.getlist('tgs')
-    tasks, taskgroups = get_tasks(projectname='FL-Core Group')
+    tasks, taskgroups = get_tasks(projectname=projectname)
 
     if len(taskgroups_desired) != 1 or 'all' not in taskgroups_desired:
         taskgroups = {i:taskgroups[i] for i in taskgroups if taskgroups[i] in taskgroups_desired}

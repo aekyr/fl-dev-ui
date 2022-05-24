@@ -17,19 +17,7 @@
             <div class="col-xs-12 groupview title">
                 {{ taskgroups[taskgroupnum] }}
             </div>
-            {% for tgcategorynum in tgcategorys %}
-                <div class="col-md-{{num_cols}} padnone clearnone taskcol">
-                    <div class="title">
-                        {{ tgcategorys[tgcategorynum] }}
-                    </div>
-                {% for task in tasks %}
-                    {% if task['data']['date_state'] == tgcategorynum and task['data']['group'] == taskgroupnum%}
-                        {% include 'taskbox.html' %}
-                    {% endif %}
-                    
-                {% endfor %}
-                </div>
-            {% endfor %}
+            {% include 'theseus/taskgroupviewrow.html' %}
         </div>
     {% endfor%}
 </div>
