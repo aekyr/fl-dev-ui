@@ -28,7 +28,7 @@ tasks = [
             'data' : {
                 'section':1,
                 'status':1,
-                'group':3
+                'group':'FLP Pytorch'
             }
         },
         {
@@ -46,7 +46,7 @@ tasks = [
             'data' : {
                 'section':3,
                 'status':1,
-                'group':2
+                'group':'FLP Tensorflow'
             }
         },
         {
@@ -64,7 +64,7 @@ tasks = [
             'data' : {
                 'section':2,
                 'status':1,
-                'group':4
+                'group':'FL Data Services'
             }
         },
         {
@@ -82,7 +82,7 @@ tasks = [
             'data' : {
                 'section':0,
                 'status': 'complete', 
-                'group':1
+                'group':'FL Core'
             }
         },
         {
@@ -100,7 +100,7 @@ tasks = [
             'data' : {
                 'section':1,
                 'status':1,
-                'group':4
+                'group':'FL Data Services'
             }
         },
         {
@@ -118,7 +118,7 @@ tasks = [
             'data' : {
                 'section':3,
                 'status':1,
-                'group':1
+                'group':'FL Core'
             }
         },
         {
@@ -136,7 +136,7 @@ tasks = [
             'data' : {
                 'section':1,
                 'status':1,
-                'group':1
+                'group':'FL Core'
             }
         },
         {
@@ -154,7 +154,7 @@ tasks = [
             'data' : {
                 'section':3,
                 'status':1,
-                'group':1
+                'group':'FL Core'
             }
         },
         {
@@ -172,7 +172,7 @@ tasks = [
             'data' : {
                 'section':1,
                 'status':1,
-                'group':1
+                'group':'FL Core'
             }
         },
         {
@@ -190,7 +190,7 @@ tasks = [
             'data' : {
                 'section':1,
                 'status':1,
-                'group':4
+                'group':'FL Data Services'
             }
         },
         {
@@ -208,7 +208,7 @@ tasks = [
             'data' : {
                 'section':2,
                 'status':1,
-                'group':3
+                'group':'FLP Pytorch'
             }
         }
 

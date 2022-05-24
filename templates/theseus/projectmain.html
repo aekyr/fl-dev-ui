@@ -17,7 +17,7 @@
                 <a href="/theseus/{{projectname}}/date?tgs={{taskgroups[taskgroupnum]}}" >{{taskgroups[taskgroupnum]}}</a>
             </div>
         {% for task in tasks %}
-            {% if task['data']['group'] == taskgroupnum %}
+            {% if task['data']['group'] == taskgroups[taskgroupnum] %}
                 {% include 'theseus/taskbox.html' %}
             {% endif %}
             

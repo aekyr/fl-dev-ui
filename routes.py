@@ -24,7 +24,7 @@ def tgview(projectname, mode):
 
     if len(taskgroups_desired) != 1 or 'all' not in taskgroups_desired:
         taskgroups = {i:taskgroups[i] for i in taskgroups if taskgroups[i] in taskgroups_desired}
-    tasks = [task for task in tasks if task['data']['group'] in taskgroups.keys()]
+    tasks = [task for task in tasks if task['data']['group'] in taskgroups.values()]
 
     if mode == 'date':
         tasks, tgcategorys  = group_tasks_by_date(tasks)

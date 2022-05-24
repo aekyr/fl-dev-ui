@@ -32,7 +32,10 @@ def insert_display_strs(tasks):
 def get_tasks(projectname):
     import examples
     tasks = sorted(insert_display_strs(examples.tasks), key=lambda item : item['data']['section'], reverse=True)
-    taskgroups = examples.taskgroups
+    taskgroups = {}
+    for task in tasks:
+        if task['data']['group'] not in taskgroups.values():
+            taskgroups[len(taskgroups)] = task['data']['group']
     return tasks, taskgroups
 
 

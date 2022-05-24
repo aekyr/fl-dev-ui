@@ -4,7 +4,7 @@
             {{tgcategorys[tgcategorynum]}}
         </div>
     {% for task in tasks %}
-        {% if task['data']['cat_num'] == tgcategorynum and task['data']['group']  == taskgroupnum %}
+        {% if task['data']['cat_num'] == tgcategorynum and task['data']['group'] == taskgroups[taskgroupnum] %}
             {% include 'theseus/taskbox.html' %}
         {% endif %}
         
