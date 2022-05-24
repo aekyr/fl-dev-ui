@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block css %}
-<link rel="stylesheet" href="./static/bootstrap/css/custom/flpm_box.css">
+<link rel="stylesheet" href="{{url_for('static', filename='css/theseus/flpm_box.css')}}">
 {% endblock %}
 
 {% block main %}
@@ -37,7 +37,7 @@
 
 
 {% block js %}
-<script src="./../static/js/custom/flpm_box.js"></script>
+<script src="{{url_for('static', filename='js/theseus/flpm_box.js')}}"></script>
 {% endblock %}
 
 

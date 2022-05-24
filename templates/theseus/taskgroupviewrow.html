@@ -1,11 +1,11 @@
 {% for tgcategorynum in tgcategorys %}
     <div class="col-md-{{num_cols}} padnone clearnone taskcol">
-        <div class="title" style="color:white">
+        <div class="title">
             {{tgcategorys[tgcategorynum]}}
         </div>
     {% for task in tasks %}
         {% if task['data']['date_state'] == tgcategorynum %}
-            {% include 'taskbox.html' %}
+            {% include 'theseus/taskbox.html' %}
         {% endif %}
         
     {% endfor %}

@@ -29,7 +29,7 @@ def insert_display_strs(tasks):
 
         return tasks
 
-def get_tasks():
+def get_tasks(projectname):
     import examples
     tasks = sorted(insert_display_strs(examples.tasks), key=lambda item : item['data']['section'], reverse=True)
     taskgroups = examples.taskgroups

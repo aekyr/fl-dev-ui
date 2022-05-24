@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Assignment Solution for Module 3</title>
-    <link rel="stylesheet" href="./static/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./static/bootstrap/css/custom/styles.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/glyph.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/theseus/styles.css')}}">
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     {% block css %}
     {% endblock css%}
@@ -26,10 +27,7 @@
   {% block main %} 
   {% endblock main %}
 
-  <!-- jQuery (Bootstrap JS plugins depend on it) -->
-  <script src="js/jquery-2.1.4.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
+  
 
   {% block js %} 
   {% endblock js %}

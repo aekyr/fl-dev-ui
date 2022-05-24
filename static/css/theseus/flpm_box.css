@@ -6,9 +6,10 @@
     background-color: rgb(27, 27, 27);
 } */
 
-.groupview {
+.groupview.title {
     text-align: left;
-    background-color: lightblue;
+    /* background-color: lightblue; */
+    border-bottom: 1px solid black;
 }
 
 
