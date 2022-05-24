@@ -14,7 +14,7 @@
                 <form action="/theseus" method="post"><button class="glyphicon glyphicon-off" type="submit" value="revive_{{task['id']}}" name="interaction"></button></form>
             {% else  %}
                 <form action="/theseus" method="post"><button class="glyphicon glyphicon-pencil" type="submit" value="edit_{{task['id']}}" name="interaction"></button></form>
-                <form action="/theseus" method="post"><button class="glyphicon glyphicon-duplicate" type="submit" value="duplicate_{{task['id']}}" name="interaction"></button></form>
+                <!-- <form action="/theseus" method="post"><button class="glyphicon glyphicon-duplicate" type="submit" value="duplicate_{{task['id']}}" name="interaction"></button></form> -->
                 <form action="/theseus" method="post"><button class="glyphicon glyphicon-check" type="submit" value="complete_{{task['id']}}" name="interaction"></button></form>
             {% endif %}
             
