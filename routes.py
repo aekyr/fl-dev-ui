@@ -1,7 +1,7 @@
 from json.tool import main
 from app import app
 from flask import render_template, redirect, request, url_for
-from flutils import get_tasks, sort_tasks_by_date
+from flutils import get_tasks, group_tasks_by_date
 
 
 @app.route('/')
@@ -17,10 +17,12 @@ def mainpage():
 
 @app.route('/theseusgroups')
 def tgview():
-    taskgroups_desired = request.args.get('tgs').split('_')
+    # taskgroups_desired = request.args.get('tgs').split(';')
+    taskgroups_desired = request.args.getlist('tgs')
+    print(taskgroups_desired)
     tasks, taskgroups = get_tasks()
     taskgroups = {i:taskgroups[i] for i in taskgroups if taskgroups[i] in taskgroups_desired}
     tasks = [task for task in tasks if task['data']['group'] in taskgroups.keys()]
 
-    tgcategorys , tasks = sort_tasks_by_date(taskgroups, tasks)
-    return render_template('projectmain.html', num_cols=12//len(tgcategorys), tasks=tasks, tgcategorys=tgcategorys, len=len)
+    tasks, tgcategorys  = group_tasks_by_date(tasks)
+    return render_template('taskgroupview.html', num_cols=12//len(tgcategorys), tasks=tasks, tgcategorys=tgcategorys, taskgroups=taskgroups, len=len)

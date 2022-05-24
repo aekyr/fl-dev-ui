@@ -5,27 +5,34 @@
 {% endblock %}
 
 {% block main %}
-<div class="row">
-    <div class="col-xs-12 title">
-        FL Project Manager
-    </div>
-</div>
-<div class="row">
-    {% for tgcategorynum in tgcategorys %}
-        <div class="col-md-{{num_cols}} padnone clearnone taskcol">
-            <div class="title">
-                {{tgcategorys[tgcategorynum]}}
-            </div>
-        {% for task in tasks %}
-            {% if task['data']['group'] == tgcategorynum %}
-                {% include 'taskbox.html' %}
+    <div class="row">
+        <div class="col-xs-12 title">
+            {% if len(taskgroups) == 1 %}
+            FL Project Manager
             {% endif %}
-            
-        {% endfor %}
         </div>
-    {% endfor %}
+    </div>
+    {% for taskgroupnum in taskgroups %}
+        <div class="row">
+            <div class="col-xs-12 groupview title">
+                {{ taskgroups[taskgroupnum] }}
+            </div>
+            {% for tgcategorynum in tgcategorys %}
+                <div class="col-md-{{num_cols}} padnone clearnone taskcol">
+                    <div class="title">
+                        {{ tgcategorys[tgcategorynum] }}
+                    </div>
+                {% for task in tasks %}
+                    {% if task['data']['date_state'] == tgcategorynum and task['data']['group'] == taskgroupnum%}
+                        {% include 'taskbox.html' %}
+                    {% endif %}
+                    
+                {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor%}
 </div>
-
 {% endblock main %}
 
 

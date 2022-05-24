@@ -2,12 +2,14 @@
 .marginnone {margin: 0;}
 .clearnone {clear: none;}
 
-.task-col div.title {
-    text-align: center;
-    font-size: 1em;
+/* body {
+    background-color: rgb(27, 27, 27);
+} */
 
+.groupview {
+    text-align: left;
+    background-color: lightblue;
 }
-
 
 
 .task-box.colourbar{
@@ -63,9 +65,13 @@ div.task-box.statuscolour4.colourbar {background-color: rgb(34, 214, 82);}
     font-weight: 400;
 }
 .task-box p.subtitle {
+    color: black;
     margin-top: -0.5em;
     font-style: italic;
     font-size: 0.7em;
+}
+.task-box p.description {
+    color: black;
 }
 
 

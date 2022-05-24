@@ -6,7 +6,7 @@
 
 {% block main %}
 <div class="row">
-    <div class="col-xs-12 title">
+    <div class="col-xs-12 title" style="color:white">
         FL Project Manager
     </div>
 </div>
@@ -14,7 +14,7 @@
     {% for taskgroupnum in taskgroups %}
         <div class="col-md-{{num_cols}} padnone clearnone taskcol">
             <div class="title">
-                <a href="/theseusgroups?tgs={{taskgroups[taskgroupnum]}}">{{taskgroups[taskgroupnum]}}</a>
+                <a href="/theseusgroups?tgs={{taskgroups[taskgroupnum]}}" style="color:white">{{taskgroups[taskgroupnum]}}</a>
             </div>
         {% for task in tasks %}
             {% if task['data']['group'] == taskgroupnum %}

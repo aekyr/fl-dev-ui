@@ -20,7 +20,7 @@
             
             
             <div class="datasection">
-                {% if task['data']['status'] != 'complete' %}
+                {% if task['data']['status'] != 'complete' and task['time']['timeleft'] %}
                 <div class="databox">
                     <p>{{task['time']['timeleft']}} {{task['time']['unit']}}</p>
                 </div>  

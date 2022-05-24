@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 
 
 # SUPPORT MODULES
-now = datetime.now()
+now = datetime.now() 
 future = datetime.now() + timedelta(days=14, hours=3, seconds=34)
 
 taskgroups = {  1:'FL-Core', 
@@ -108,15 +108,69 @@ tasks = [
             'assignees':['ron'],
             'time':{
                 'datetime_start':now,
-                'datetime_end':future
+                'datetime_end':now - timedelta(days=14, hours=3, seconds=34)
             },
             'info' : {
-                'title': 'Pytorch Pipelining',
+                'title': 'Pytorch Pipelining late',
                 'subtitle': 'hello',
                 'description': 'pipeline pytorch to automate with mlflow by this date SKAN likes CKAN',
             },
             'data' : {
                 'section':3,
+                'status':1,
+                'group':1
+            }
+        },
+        {
+            'id':1,
+            'assignees':['ron'],
+            'time':{
+                'datetime_start':now,
+                'datetime_end':now + timedelta(days=14, hours=3, seconds=34)
+            },
+            'info' : {
+                'title': 'Pytorch Pipelining early',
+                'subtitle': 'hello',
+                'description': 'pipeline pytorch to automate with mlflow by this date SKAN likes CKAN',
+            },
+            'data' : {
+                'section':1,
+                'status':1,
+                'group':1
+            }
+        },
+        {
+            'id':1,
+            'assignees':['ron'],
+            'time':{
+                'datetime_start':now,
+                'datetime_end':now + timedelta(days=14, hours=3, seconds=34)
+            },
+            'info' : {
+                'title': 'Pytorch Pipelining early',
+                'subtitle': 'hello',
+                'description': 'pipeline pytorch to automate with mlflow by this date SKAN likes CKAN',
+            },
+            'data' : {
+                'section':3,
+                'status':1,
+                'group':1
+            }
+        },
+        {
+            'id':1,
+            'assignees':['ron'],
+            'time':{
+                'datetime_start':now,
+                'datetime_end':None
+            },
+            'info' : {
+                'title': 'Pytorch Pipelining long term',
+                'subtitle': 'hello',
+                'description': 'pipeline pytorch to automate with mlflow by this date SKAN likes CKAN',
+            },
+            'data' : {
+                'section':1,
                 'status':1,
                 'group':1
             }
